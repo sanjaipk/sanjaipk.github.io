@@ -19,6 +19,18 @@
         main {
             flex: 1 0 auto;
         }
+        .agenda .agenda-date { width: 170px; }
+.agenda .agenda-date .dayofmonth {
+  width: 40px;
+  font-size: 36px;
+  line-height: 36px;
+  float: left;
+  text-align: right;
+  margin-right: 10px; 
+}
+.agenda .agenda-date .shortdate {
+  font-size: 0.75em; 
+}
     </style>
 </head>
 
@@ -46,11 +58,23 @@
             </ul>
         </div>
     </nav>
-     <div class="col s12 black-text">
-        <a href="#!" class="breadcrumb">First</a>
-        <a href="#!" class="breadcrumb">Second</a>
-        <a href="#!" class="breadcrumb">Third</a>
-      </div>
+     <div class="col s12 ">
+        <div class="collection">
+            <a href="#!" class="collection-item">
+                <div class="row">
+                    <div class="row s4 agenda-date">
+                        <div class="dayofmonth">26</div>
+                        <div class="dayofweek">Saturday</div>
+                        <div class="shortdate text-muted">July, 2014</div>
+                    </div>
+                     <div class="row s8">Layered Architecture</div>
+                </div>
+            </a>
+            <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+            <a href="#!" class="collection-item">Alan</a>
+            <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col s10 m10">
@@ -67,22 +91,7 @@
                                             </div>
                                         </div>
                     
-                    <ul class="pagination">
-                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a>
-                        </li>
-                        <li class="active"><a href="#!">1</a>
-                        </li>
-                        <li class="waves-effect"><a href="#!">2</a>
-                        </li>
-                        <li class="waves-effect"><a href="#!">3</a>
-                        </li>
-                        <li class="waves-effect"><a href="#!">4</a>
-                        </li>
-                        <li class="waves-effect"><a href="#!">5</a>
-                        </li>
-                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a>
-                        </li>
-                    </ul>
+                   
                 </div>
             </div>
         </div>

@@ -2,109 +2,204 @@
 <html>
 
 <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-        body {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-        }
-        main {
-            flex: 1 0 auto;
-        }
-         .agenda-date { width: 170px; }
- .agenda-date .dayofmonth {
-  width: 40px;
-  font-size: 36px;
-  line-height: 36px;
-  float: left;
-  text-align: right;
-  margin-right: 10px; 
-}
-.shortdate {
-  font-size: 0.75em; 
-}
-    </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    
+    main {
+      flex: 1 0 auto;
+    }
+    
+    .agenda-date {
+      width: 170px;
+    }
+    
+    .agenda-date .dayofmonth {
+      width: 40px;
+      font-size: 36px;
+      line-height: 36px;
+      float: left;
+      text-align: right;
+      margin-right: 10px;
+    }
+    
+    .shortdate {
+      font-size: 0.75em;
+    }
+  </style>
 </head>
 
 <body>
-   <div class="container"> 
+  <div class="container">
     <nav>
-        <div class="nav-wrapper light-green lighten-1">
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="Index.html">Articles</a>
-                </li>
-                <li><a href="Projects.html">Projects</a>
-                </li>
-                <li><a href="Resume.html">Resume</a>
-                </li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#"><i class="material-icons">search</i></a>
-                </li>
-                <li><a href="#"><i class="material-icons">view_module</i></a>
-                </li>
-                <li><a href="#"><i class="material-icons">refresh</i></a>
-                </li>
-                <li><a href="#"><i class="material-icons">more_vert</i></a>
-                </li>
-            </ul>
-        </div>
+      <div class="nav-wrapper light-green lighten-1">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="Index.html">Articles</a>
+          </li>
+          <li><a href="Projects.html">Projects</a>
+          </li>
+          <li><a href="Resume.html">Resume</a>
+          </li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#"><i class="material-icons">search</i></a>
+          </li>
+          <li><a href="#"><i class="material-icons">view_module</i></a>
+          </li>
+          <li><a href="#"><i class="material-icons">refresh</i></a>
+          </li>
+          <li><a href="#"><i class="material-icons">more_vert</i></a>
+          </li>
+        </ul>
+      </div>
     </nav>
-  
-
     <div class="row">
-        <div class="col s9">
-            <div class="row">
-                <div class="col s12 m12">
-                    <div class="card blue-grey darken-1">
-                                            <div class="card-content white-text">
-                                                <span class="card-title">Card Title</span>
-                                               
-                                            </div>
-                                            <div class="card-action">
-                                                <a href="#">This is a link</a>
-                                                <a href="#">This is a link</a>
-                                            </div>
-                                        </div>
-                    
-                   
-                </div>
+      <div class="col s9">
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Layered Architecture</span>
+              </div>
+              <div class="card-action white-text lighten-4">
+                <h5>Introduction:</h5> Layered application is software architectural approach. In this article provides details on Layered application approach with examples.
+                <h5>High-level process flow:</h5> Process flow is a representation of path that will be taken by user input until it reaches data store.
+                <h5>Generic layering template:</h5> It is advised to start with generic layering structure and evolve to accept process flow.
+                <br/> Generic layering involves separation of screens from logic and logic from data storage. It consists of following 3 layers: 
+                <ul type="circle">
+                  <li><i>UI Layer</i> : contains all screens and logic required to render a web page.</li>
+                  <li><i>Business Layer</i> : contains code that would enable business logics, validation on the input from UI layer.</li>
+                  <li><i>Data Layer</i> : contains all functions that helps in saving business entities to data store.</li>
+                </ul>
+                <h5>Inside a layer:</h5> Layers contains a range of software entities from a few lines of code to set of applications. For instance, in new microservices architectural approach;
+                <br/> Generic layering involves separation of screens from logic and logic from data storage. It consists of following 3 layers: 
+                <ul type="circle">
+                  <li>UI layer mabe have client applications (mobile apps) that facilitate data collection.</li>
+                  <li>Business layer may contact external government web services (address verification).</li>
+                  <li>Data layer maybe wrapping a cloud API to store data on cloud.</li>
+                </ul>
+                <h5>Interactions between layers:</h5>Communication is done using finalized contracts between involved layers. These contracts are essentially data structure used to pass information. Mostly, the contracts are formatted into XML or json (simplified XML) or Class objects.Contracts for layer communication is explained in future blogs. Please do care to have a look.
+                <h5>References:</h5> 
+                <ul type="circle">
+                  <li>https://msdn.microsoft.com/en-us/library/ee658109.aspx</li>
+                  <li>https://en.wikipedia.org/wiki/Multitier_architecture</li>
+                  <li>http://microservices.io/patterns/microservices.html</li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="col s3">
-                
+      </div>
+      <div class="col s3">
         <div class="collection">
-            <a href="#!" class="collection-item">
-                <div class="row" style="margin-bottom: 0px;">
-                     <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Layered Architecture</div>
-                     <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">July, 2014</div>
-                </div>
-            </a>
-            <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
-            <a href="#!" class="collection-item">Alan</a>
-            <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Layered Architecture</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">1 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Classes explained</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">2 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Business Objects</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">3 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">XML</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">4 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">JSON</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">5 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Server-side applications</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">6 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Client-side applications</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">8 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Server to server communication</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">9 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Web services</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">10 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">REST services</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">12 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">SOAP services</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">13 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">API services</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">14 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Encode and decode</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">15 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Entity and Context</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">16 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="row s12" style="margin-left: 0px;margin-bottom: 0px;">Encryption and Decryption</div>
+              <div class="row shortdate" style="margin-left: 0px;margin-bottom: 0px;">18 Jan, 2018</div>
+            </div>
+          </a>
+          <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+          <a href="#!" class="collection-item">Alan</a>
+          <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
         </div>
- 
-        </div>
+      </div>
     </div>
-    </div>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script type="javascript">
-        $(document).ready(function() {
-            $('.collapsible').collapsible();
-        });
-    </script>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="javascript">
+    $(document).ready(function() { $('.collapsible').collapsible(); });
+  </script>
 </body>
 
 </html>
